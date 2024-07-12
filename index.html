@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Naimur Rahman Arnab</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="script.js"></script>
 </head>
@@ -13,21 +15,39 @@
 <header class="header">
     <nav class="navbar">
         <div class="container">
-            <div class="logo">
-                <a href="#">cookynaimur@gmail.com</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><button><a href="#">Hire me</a></button></li>
+
+            <ul class="sidebar">
+              <li onclick=hideSidebar()><a href="#"><img class="crossButton" src="cross.png" alt="cross" width="50px"></a></li>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#work">Work</a></li>
+              <li><a href="#about">About Me</a></li>
+              <li><a href="#education">Education</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><button><a href="#">Hire me</a></button></li>
+          </ul>
             </ul>
+          
+            <ul class="nav-links">
+              
+                <li><a href="#">Naimur Rahman Arnab</a></li> 
+          
+                <li><a class="hideOnMobile" href="#home">Home</a></li>
+                <li><a class="hideOnMobile" href="#services">Services</a></li>
+                <li><a class="hideOnMobile" href="#work">Work</a></li>
+                <li><a class="hideOnMobile" href="#about">About Me</a></li>
+                <li><a class="hideOnMobile" href="#education">Education</a></li>
+                <li><a class="hideOnMobile" href="#skills">Skills</a></li>
+                <li><a class="hideOnMobile" href="#projects">Projects</a></li>
+                <li><a class="hideOnMobile" href="#contact">Contact</a></li>
+                <li><button><a class="hideOnMobile" href="#">Hire me</a></button></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><img src="hamburger.png" alt="hamburger"></a></li>
+            </ul>
+
         </div>
+       
     </nav>
 </header>
 
@@ -211,109 +231,198 @@ digital marketing efforts.
                     </div>
                 </div>
             </section>
-            
-        <section class="projects" id="projects">
-                <h1>My Projects</h1>
-            
-                <!-- Project 1 -->
-                <div class="project">
-                    <input type="checkbox" id="project1">
-                    <label for="project1" class="project-box">
-                        <h3>Serenity</h3>
-                        <p>Mental Health App for people who need some</p>
-                    </label>
-                    <div class="modal">
-                        <div class="modal-content">
-                            <h3>Serenity</h3>
-                            <p>Mental Health App for people who need some</p>
-                            <a href="https://github.com/Arnaim/SerenityProject" target="_blank">GitHub Link</a>
+
+
+            <section class="projects" id="projects">
+                <div class="container">
+                  <h1>My Projects</h1>
+                  <div class="row">
+                  <!-- Project 1 -->
+                  
+                    <div class="col-lg-4 col-md-6 mb-4">
+                      <div class="project" data-toggle="modal" data-target="#projectModal1">
+                        <div class="project-box text-center">
+                          <h3>Serenity</h3>
+                          <p>Mental Health App for people who need some</p>
                         </div>
+                      </div>
                     </div>
-                </div>
-            
-                <!-- Project 2 -->
-                <div class="project">
-                    <input type="checkbox" id="project2">
-                    <label for="project2" class="project-box">
-                        <h3>Criminal-Face-Recognition-System</h3>
-                        <p>Detecting criminals using face recognition technology</p>
-                    </label>
-                    <div class="modal">
-                        <div class="modal-content">
-                            <h3>Criminal-Face-Recognition-System</h3>
-                            <p>Detecting criminals using face recognition technology</p>
-                            <a href="https://github.com/Arnaim/Criminal-Face-Recognition-System" target="_blank">GitHub Link</a>
+                  
+              
+                  <!-- Project 2 -->
+                  
+                    <div class="col-lg-4 col-md-6 mb-4">
+                      <div class="project" data-toggle="modal" data-target="#projectModal2">
+                        <div class="project-box text-center">
+                          <h3>Criminal-Face-Recognition-System</h3>
+                          <p>Detecting criminals using face recognition technology</p>
                         </div>
+                      </div>
                     </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="project">
-                    <input type="checkbox" id="project2">
-                    <label for="project2" class="project-box">
-                        <h3>Algorithm-Visualizer</h3>
-                        <p>Visualizing various algorithms</p>
-                    </label>
-                    <div class="modal">
-                        <div class="modal-content">
+                  
+                   
+                  <!-- Project 3 -->
+                  
+                    <div class="col-lg-4 col-md-6 mb-4">
+                      <div class="project" data-toggle="modal" data-target="#projectModal3">
+                        <div class="project-box text-center">
                             <h3>Algorithm-Visualizer</h3>
-                            <p>Visualizing various algorithms</p>
-                            <a href="https://github.com/Arnaim/Algorithm-Visualizer" target="_blank">GitHub Link</a>
+                            <p>Visualizing various algorithms to help understand their workings.</p>
                         </div>
+                      </div>
                     </div>
-                </div>
+                 
 
-                <!-- Project 4 -->
-                <div class="project">
-                    <input type="checkbox" id="project2">
-                    <label for="project2" class="project-box">
-                        <h3>A-star-algorithm-path-finder</h3>
-                        <p>Finding shortest path with A* Algorithm using visual demonstration </p>
-                    </label>
-                    <div class="modal">
-                        <div class="modal-content">
-                            <h3>A-star-algorithm-path-finder</h3>
-                            <p>Finding shortest path with A* Algorithm using visual demonstration </p>
-                            <a href="https://github.com/Arnaim/A-star-algorithm-path-finder" target="_blank">GitHub Link</a>
+                       <!-- Project 4 -->
+                       
+                        <div class="col-lg-4 col-md-6 mb-4">
+                          <div class="project" data-toggle="modal" data-target="#projectModal4">
+                            <div class="project-box text-center">
+                                <h3>A-star-algorithm-path-finder</h3>
+                                <p>Finding the shortest path with A* Algorithm using visual demonstration.</p>
+                            </div>
+                          </div>
                         </div>
-                    </div>
-                </div>
+                      
 
-                <!-- Project 5 -->
-                <div class="project">
-                    <input type="checkbox" id="project2">
-                    <label for="project2" class="project-box">
-                        <h3>Handwritten-Digit-Recognition</h3>
-                        <p>Using ML to recognize hand written digits</p>
-                    </label>
-                    <div class="modal">
-                        <div class="modal-content">
+                           <!-- Project 5 -->
+                 
+                    <div class="col-lg-4 col-md-6 mb-4">
+                      <div class="project" data-toggle="modal" data-target="#projectModal5">
+                        <div class="project-box text-center">
                             <h3>Handwritten-Digit-Recognition</h3>
-                            <p>Using ML to recognize hand written digits</p>
-                            <a href="https://github.com/Arnaim/Handwritten-Digit-Recognition" target="_blank">GitHub Link</a>
+                            <p>Using machine learning to recognize handwritten digits.</p>
                         </div>
+                      </div>
                     </div>
-                </div>
+                 
 
-                <!-- Project 6 -->
-                <div class="project">
-                    <input type="checkbox" id="project2">
-                    <label for="project2" class="project-box">
-                        <h3>Portfolio Website</h3>
-                        <p>My Portfolio website</p>
-                    </label>
-                    <div class="modal">
-                        <div class="modal-content">
-                            <h3>Portfolio Website</h3>
-                            <p>My Portfolio website</p>
-                            <a href="https://github.com/Arnaim/My-Portfolio/tree/main" target="_blank">GitHub Link</a>
+                       <!-- Project 6 -->
+                      
+                        <div class="col-lg-4 col-md-6 mb-4">
+                          <div class="project" data-toggle="modal" data-target="#projectModal6">
+                            <div class="project-box text-center">
+                                <h3>Portfolio Website</h3>
+                                <p>My personal portfolio website showcasing my projects and skills.</p>
+                            </div>
+                          </div>
                         </div>
-                    </div>
+                      </div>
+                  <!-- Repeat for other projects -->
+              
                 </div>
-                <!-- Repeat similar structure for other projects -->
-        </section>
-            
-            
+              </section>
+              
+             <!-- Project Modals -->
+<!-- Modal 1 -->
+<div class="modal fade" id="projectModal1" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="projectModalLabel1">Serenity</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>"Serenity" is a mobile application designed to provide personalized support and resources for mental health and well-being. It offers tools for mindfulness, access to therapists, community support forums, and educational content, all aimed at promoting mental wellness.
+          </p>
+          <a href="https://github.com/Arnaim/SerenityProject" class="btn btn-outline-light" target="_blank">GitHub Link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal 2 -->
+  <div class="modal fade" id="projectModal2" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="projectModalLabel2">Criminal-Face-Recognition-System</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>The Criminal-Face-Recognition-System utilizes advanced facial recognition technology to identify and track individuals with potential criminal records for law enforcement purposes.</p>
+          <a href="https://github.com/Arnaim/Criminal-Face-Recognition-System" class="btn btn-outline-light" target="_blank">GitHub Link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="projectModal3" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title" id="projectModalLabel3">Algorithm-Visualizer</h2>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>The Algorithm-Visualizer is a tool designed to visually demonstrate various algorithms, aiding in understanding their mechanics and applications in computer science and problem-solving.</p>
+              <a href="https://github.com/Arnaim/Algorithm-Visualizer" class="btn btn-outline-light" target="_blank">GitHub Link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <!-- Modal 4 -->
+  <div class="modal fade" id="projectModal4" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel4" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="projectModalLabel4">A-star-algorithm-path-finder</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>The A-star-algorithm-path-finder is a program that uses the A* algorithm to find the shortest path between two points on a grid or map, useful in navigation and optimization applications.</p>
+          <a href="https://github.com/Arnaim/A-star-algorithm-path-finder" class="btn btn-outline-light" target="_blank">GitHub Link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal 5 -->
+    <div class="modal fade" id="projectModal5" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel5" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title" id="projectModalLabel5">Handwritten-Digit-Recognition</h2>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Handwritten-Digit-Recognition is a machine learning application that identifies and interprets handwritten digits, commonly used in digitizing handwritten documents and automatic character recognition systems.</p>
+              <a href="https://github.com/Arnaim/Handwritten-Digit-Recognition" class="btn btn-outline-light" target="_blank">GitHub Link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <!-- Modal 6 -->
+  <div class="modal fade" id="projectModal6" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel6" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="projectModalLabel6">Portfolio Website</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>A Portfolio Website showcases an individual's or professional's work, skills, and accomplishments, typically used for self-promotion and career advancement in various fields such as design, development, and creative industries.</p>
+          <a href="https://github.com/Arnaim/My-Portfolio" class="btn btn-outline-light" target="_blank">GitHub Link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
             
     <section class="contact" id="contact">
             <div class="container">
@@ -334,7 +443,21 @@ digital marketing efforts.
             <p>&copy; 2024 Naimur Rahman Arnab. All Rights Reserved.</p>
         </div>
     </footer>
-
-    
+  
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+      }
+      function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+      }
+    </script>
+</body>
 </body>
 </html>
